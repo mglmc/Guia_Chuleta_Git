@@ -53,16 +53,46 @@ El control de versiones básicamente consiste en mantener el control de los camb
 
 ## Comandos útiles para git:
 
-* **git** init : crea un repositorio nuevo.
-* **git clone** /path/to/repository : clona un repositorio que está en Github a tu directorio local. ej: git clone https://github.com/arduino/Arduino
-* **git commit**
-* **git status** : para saber el estado de los archivos
+**En el interprete de comandos de git-bash**
+
+* Mostrar en que directorio estamos: pwd
+* Crear un directorio: mkdir nombreDirectorio
+* Cambiar de directorio: cd RutaDelNuevoDirectorio
+* Mostrar la lista de ficheros de un directorio: ls
+* Borrar un fichero: rm nombreArchivo 
+* Cambiar (mover) un fichero de directorio: 
+
+**En Control de versiones local**
+
+* Crear un repositorio local en nuestra máquina: **git init**
+* Preparar ficheros para ser confirmados en el repositorio local: **git add NombreFichero**
+* Confirmar cambios en un repositorio local: **git commit -m "Comentario con los cambios realizados"**
+* Deshacer las operaciones de preparar y confirmar: 
+* Identificar el estado de un fichero o ficheros en un repositorio local: **git status**
+
+**En control de versiones centralizado**
+
+* Configurar git para que trabaje tras un proxy: **git config --global http.proxy 'proxy.satd.uma.es:3120'**
+* Replicar un repositorio remoto localmente en nuestra máquina: **git clone URLrepositorio** (pej: git clone http://github.com/arduino/Arduino)
+* Replicar un repositorio local en un servidor remoto: **git remote add origin URLservidorRemoto** (pej: git remote add origin https://github.com/uma-dte-docencia/chuleta-git-2017-18-internautas-1)
+* Traer los cambios de un repositorio remoto a un repositorio local: **git pull**
+* Enviar los cambios de un repositorio a uno remoto: **git push NombreRemoto NombreRama** (pej: git push origin master)
+si ya se esta en la rama master basta con hacer git push
+
+**En control de versiones distribuido**
+
+* Crear una rama en un repositorio local: **git branch nombreNuevaRama**
+* Cambiar de rama en la copia local: **git checkout nombreRama**
+* Enviar la rama al repositorio remoto: **git push origin NombreRama**
+* Realiaza un pull request entre dos ramas de un repositorio remoto:
+* Realizar un pull request esntre dos repositorios que resultaron de un Fork:
+
+**Otros comandos de interes**
+
 * **git diff** : para saber las diferencias en un commit (en el/los archivos) ej: git diff HEAD
 * **git log** : para ver los cambios(todos los commits) y su HEAD.
 * **git reset** : para unstage archivos ej: git reset archivo.txt
-* **git branch** : para hacer una rama copia de la master (o superior) y poder trabajar en ella en paralelo. ej: git branch guia_
 * **git branch -d <branch name>** : para eliminar un branch.
-* **git checkout** : para cambiar de rama. REVISAR
 * **git merge** : para unir tu rama a otra. ej: git merge rama2
 * **git config --global http.proxy 'proxy.wifi.uma.es:3128'** : para redes con proxy
 * **git add origin (archivos que vas a modificar)** ->origin es el nombre (alias) que se le da al repositorio al que le vas a hacer stage
