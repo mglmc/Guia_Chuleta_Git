@@ -5,28 +5,41 @@
 _Indica qué tenemos que saber y saber hacer en la asignatura de Proyectos de Sistemas Electrónicos. _
 
 ## Control de versiones
+El control de versiones básicamente consiste en mantener el control de los cambios que se realizan sobre la configuración de algun documento o producto.
 
-##### POR HACER
-
-_Definir brevemente en qué consiste el control de versiones._
 
 ## Conceptos
 
-* Repositorio local:
-* Repositorio remoto:
-* Copia local:
-* log:
-* Conflicto:
+* Repositorio local: base de datos centralizada donde se guardan las distintas versiones de los ficheros sometidos al control de versiones.
+
+* Repositorio remoto: es un repositorio local que reside en el servidor centralizado.
+
+* Copia local: es la copia que se realiza a algún fichero sometido a control de versiones.
+
+* log: Registro que muestra todos los cambios que se han realizado en un repositorio.
+
+* Conflicto: problema que surge cuando los clientes realizan cambios incompatibles entre si.
+
 
 ## Operaciones:  
 
-* Clone:
-* Add:
-* Commit:
-* Push:
-* Pull:
-* Fork:
-* Pull Request:
+* Clone: replica un repositorio entero con todo su historial de cambios y actualiza el directorio local.
+
+* Add: realiza la copia de un fichero modificado, poniéndola en la zona de preparación para ser confirmada.
+
+* Commit: acción que se realiza cuando queremos que los cambios que hemos realizado en el fichero se suban al repositorio.
+
+* Push: es la operación en la que se envian al repositorio centralizado un commit o un conjunto de commits.
+
+* Pull: es la operación en la que se actualiza el repositorio local y el directorio local con commits que provienen del repositio remoto. Es la acción contraria a push.
+
+* Fork: clone que se realiza dentro del mismo servidor. Al repositorio original se le llama UPSTREAM.
+
+* Pull Request: 
+  - Entre Ramas: petición que se hace al desarrollador de una rama para que sus cambios se unan con la rama principal
+
+  - Entre repositorios: petición que se hace al desarrollador de que los cambios hechos por elfork sean incorporados al repositorio original.
+
 
 ## Clientes Gráficos:
 
