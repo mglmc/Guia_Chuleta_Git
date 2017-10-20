@@ -55,11 +55,11 @@ El control de versiones básicamente consiste en mantener el control de los camb
 
 **En el interprete de comandos de git-bash**
 
-* Mostrar en que directorio estamos: pwd
-* Crear un directorio: mkdir nombreDirectorio
-* Cambiar de directorio: cd RutaDelNuevoDirectorio
-* Mostrar la lista de ficheros de un directorio: ls
-* Borrar un fichero: rm nombreArchivo 
+* Mostrar en que directorio estamos: **pwd**
+* Crear un directorio: **mkdir nombreDirectorio**
+* Cambiar de directorio: **cd RutaDelNuevoDirectorio**
+* Mostrar la lista de ficheros de un directorio: **ls**
+* Borrar un fichero: **rm nombreArchivo** 
 * Cambiar (mover) un fichero de directorio: 
 
 **En Control de versiones local**
