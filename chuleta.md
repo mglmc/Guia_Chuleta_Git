@@ -67,7 +67,7 @@ El control de versiones básicamente consiste en mantener el control de los camb
 * Crear un repositorio local en nuestra máquina: **git init**
 * Preparar ficheros para ser confirmados en el repositorio local: **git add NombreFichero**
 * Confirmar cambios en un repositorio local: **git commit -m "Comentario con los cambios realizados"**
-* Deshacer las operaciones de preparar y confirmar: **git reset <commit>** 
+* Deshacer las operaciones de preparar y confirmar: **git reset<commit>** 
 * Identificar el estado de un fichero o ficheros en un repositorio local: **git status**
 
 **En control de versiones centralizado**
