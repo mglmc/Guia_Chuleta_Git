@@ -87,6 +87,7 @@ El control de versiones consiste básicamente en mantener el control de los camb
 * **git config --global http.proxy 'proxy.wifi.uma.es:3128'** : Para redes con proxy
 * **git add** *Origin ArchivosAModificar* ->origin es el nombre (alias) que se le da al repositorio al que le vas a hacer stage
 * **git fetch** *RepRemoto* : Para recuperar datos remotos de tus repositorios remotos
+* **git stash** : Cuando trabajas en un archivo (y lo modificas) en un repositorio y quieres cambiar de rama se hace un preguardado que tienes que anular con este comando.
 * **git pull** : Para recuperar y unir la rama remota con la rama actual.
 * **git push** *RepRemoto Rama* : Para enviar un repositorio local a uno remoto Ej: git push origin master
 * **git rm** *Archivos* : Para eliminar algún archivo del repositorio. ej: git rm *'*.txt'
