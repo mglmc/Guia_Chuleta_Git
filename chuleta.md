@@ -33,7 +33,7 @@ El control de versiones consiste básicamente en mantener el control de los camb
 
 ## Clientes Gráficos:
 
-* **SourceTree**: Disponible para Windows y MAC. Versión de prueba gratuita.
+* **SourceTree**: Disponible para Windows y MAC. 
 * **GitKraken**: Disponible para Windows, Linux y MAC.
 
 ## Servicios de repositorios remotos con control de errores:
