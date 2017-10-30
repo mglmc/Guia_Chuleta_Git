@@ -55,26 +55,25 @@ El control de versiones consiste básicamente en mantener el control de los camb
 
 **En Control de versiones local**
 
-* Crear un repositorio local en nuestra máquina: **git init**
-* Preparar ficheros para ser confirmados en el repositorio local: **git add** *NombreFichero*
-* Confirmar cambios en un repositorio local: **git commit -m "Comentario con los cambios realizados"**
-* Deshacer las operaciones de preparar y confirmar: **git reset commit**
-* Identificar el estado de un fichero o ficheros en un repositorio local: **git status**. Se realiza posteriormente a **git add**.
+* **git init**: Crear un repositorio local en nuestra máquina.
+* **git add** *NombreFichero*: Preparar ficheros para ser confirmados en el repositorio local.
+* **git commit -m "Comentario con los cambios realizados"**: Confirmar cambios en un repositorio local.
+* **git reset commit**: Deshacer las operaciones de preparar y confirmar.
+* **git status**: Identificar el estado de un fichero o ficheros en un repositorio local.
 
 **En control de versiones centralizado**
 
-* Configurar git para que trabaje tras un proxy: **git config --global http.proxy 'proxy.satd.uma.es:3120'**
-* Replicar un repositorio remoto localmente en nuestra máquina: **git clone** *URLrepositorio* (pej: git clone http://github.com/arduino/Arduino Arduino_Code)
-* Replicar un repositorio local en un servidor remoto: **git remote add origin** *URLservidorRemoto* (pej: git remote add origin https://github.com/uma-dte-docencia/chuleta-git-2017-18-internautas-1)
-* Traer los cambios de un repositorio remoto a un repositorio local: **git pull**
-* Enviar los cambios de un repositorio a uno remoto: **git push** *NombreRemoto NombreRama* (pej: git push origin master)
-si ya se esta en la rama master basta con hacer git push
+* **git config --global http.proxy 'proxy.satd.uma.es:3120'**: Configurar git para que trabaje tras un proxy.
+* **git clone** *URLrepositorio*: Replicar un repositorio remoto localmente en nuestra máquina (pej: git clone http://github.com/arduino/Arduino Arduino_Code).
+*  **git remote add origin** *URLservidorRemoto*: Replicar un repositorio local en un servidor remoto:(pej: git remote add origin https://github.com/uma-dte-docencia/chuleta-git-2017-18-internautas-1).
+* **git pull**: Traer los cambios de un repositorio remoto a un repositorio local.
+* **git push** *NombreRemoto NombreRama*: Enviar los cambios de un repositorio a uno remoto (pej: git push origin master) si ya se esta en la rama master basta con hacer git push.
 
 **En control de versiones distribuido**
 
-* Crear una rama en un repositorio local: **git branch** *NombreNuevaRama*
-* Cambiar de rama en la copia local: **git checkout** *NombreRama*
-* Enviar la rama al repositorio remoto: **git push origin** *NombreRama*
+* **git branch** *NombreNuevaRama*: Crear una rama en un repositorio local.
+* **git checkout** *NombreRama*: Cambiar de rama en la copia local.
+* **git push origin** *NombreRama*: Enviar la rama al repositorio remoto.
 * Realizar un pull request entre dos ramas de un repositorio remoto:
 * Realizar un pull request entre dos repositorios que resultaron de un Fork:
 
