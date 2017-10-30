@@ -74,7 +74,7 @@ El control de versiones consiste básicamente en mantener el control de los camb
 * **git branch** *NombreNuevaRama*: Crear una rama en un repositorio local.
 * **git checkout** *NombreRama*: Cambiar de rama en la copia local.
 * **git push origin** *NombreRama*: Enviar la rama al repositorio remoto.
-* Realizar un pull request entre dos ramas de un repositorio remoto: MIRAR
+* Realizar un pull request entre dos ramas de un repositorio remoto:
 * Realizar un pull request entre dos repositorios que resultaron de un Fork:
 
 **Otros comandos de interes**
@@ -99,6 +99,15 @@ El control de versiones consiste básicamente en mantener el control de los camb
 
 
 ## Comandos útiles para la terminal:
+
+* **ls -all** : lista todos los archivos incluidos los que empiezan con punto.
+* **cd ..**  : para volver atrás en el directorio.
+* **touch** : crea un archivo vacío.
+* **mkdir -p** : crea ramas de directorios que no existen.
+* **man [comando]** : para consultar en el manual dicho comando.
+* **cat** : concatena archivos y/o los muestra como salida.
+* ***.extension** : para referirnos a todos las extensiones de un directorio.
+
 
 ## Tips:
 
