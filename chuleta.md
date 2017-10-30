@@ -33,7 +33,7 @@ El control de versiones consiste básicamente en mantener el control de los camb
 
 ## Clientes Gráficos:
 
-* **SourceTree**: Disponible para Windows y MAC. 
+* **SourceTree**: Disponible para Windows y MAC.
 * **GitKraken**: Disponible para Windows, Linux y MAC.
 
 ## Servicios de repositorios remotos con control de errores:
@@ -46,12 +46,12 @@ El control de versiones consiste básicamente en mantener el control de los camb
 
 **En el interprete de comandos de git-bash**
 
-* Mostrar en que directorio estamos: **pwd**
-* Crear un directorio: **mkdir nombreDirectorio**
-* Cambiar de directorio: **cd RutaDelNuevoDirectorio**
-* Mostrar la lista de ficheros de un directorio: **ls**
-* Borrar un fichero: **rm nombreArchivo**
-* Cambiar (mover) un fichero de directorio: **move nombreDirectorio**
+* **pwd**: Mostrar en que directorio estamos.
+* **mkdir nombreDirectorio**: Crear un directorio.
+* **cd RutaDelNuevoDirectorio**: Cambiar de directorio.
+* **ls**: Mostrar la lista de ficheros de un directorio.
+* **rm nombreArchivo**: Borrar un fichero.
+* **move nombreDirectorio**: Cambiar (mover) un fichero de directorio.
 
 **En Control de versiones local**
 
@@ -103,5 +103,5 @@ si ya se esta en la rama master basta con hacer git push
 
 ## Tips:
 
-*
-*
+* Se recomienda ante dudas lo primero es hacer **git status** para saber donde estas y donde git te puede dar alguna pista sobre que puedes hacer.
+* Cuando hagas un git branch recordar hacer el checkout [nombre de la nueva rama] para empezar a trabajar en dicha rama.
