@@ -10,35 +10,37 @@ El control de versiones consiste básicamente en mantener el control de los camb
 
 ## Conceptos
 
-* Repositorio local: Base de datos centralizada donde se guardan las distintas versiones de los ficheros sometidos al control de versiones.
-* Repositorio remoto: Es un repositorio local que reside en el servidor centralizado.
-* Copia local: Es la copia que se realiza a algún fichero sometido a control de versiones.
-* log: Registro Que muestra todos los cambios que se han realizado en un repositorio.
-* Conflicto: Problema que surge cuando los clientes realizan cambios incompatibles entre si.
+* **Repositorio local**: Base de datos centralizada donde se guardan las distintas versiones de los ficheros sometidos al control de versiones.
+* **Repositorio remoto**: Es un repositorio local que reside en el servidor centralizado.
+* **Copia local**: Es la copia que se realiza a algún fichero sometido a control de versiones.
+* **log**: Registro Que muestra todos los cambios que se han realizado en un repositorio.
+* **Conflicto**: Problema que surge cuando los clientes realizan cambios incompatibles entre si.
 
 
 ## Operaciones:  
 
-* Clone: Replica un repositorio entero con todo su historial de cambios y actualiza el directorio local.
-* Add: Realiza la copia de un fichero modificado, poniéndola en la zona de preparación para ser confirmada.
-* Commit: Acción que se realiza cuando queremos que los cambios que hemos realizado en el fichero se suban al repositorio.
-* Push: Es la operación en la que se envian al repositorio centralizado un commit o un conjunto de commits.
-* Pull: Es la operación en la que se actualiza el repositorio local y el directorio local con commits que provienen del repositio remoto. Es la acción contraria a push.
-* Fork: Clone que se realiza dentro del mismo servidor. Al repositorio original se le llama UPSTREAM.
-* Pull Request: 
+* **Clone**: Replica un repositorio entero con todo su historial de cambios y actualiza el directorio local.
+* **Add**: Realiza la copia de un fichero modificado, poniéndola en la zona de preparación para ser confirmada.
+* **Commit**: Acción que se realiza cuando queremos que los cambios que hemos realizado en el fichero se suban al repositorio.
+* **Push**: Es la operación en la que se envian al repositorio centralizado un commit o un conjunto de commits.
+* **Pull**: Es la operación en la que se actualiza el repositorio local y el directorio local con commits que provienen del repositio remoto. Es la acción contraria a push.
+* **Fork**: Clone que se realiza dentro del mismo servidor. Al repositorio original se le llama UPSTREAM.
+* **Pull Request**:
   - Entre Ramas: Petición que se hace al desarrollador de una rama para que sus cambios se unan con la rama principal
   - Entre repositorios: Petición que se hace al desarrollador de que los cambios hechos por elfork sean incorporados al repositorio original.
 
+* **Merge**: La operación donde se une un branch (una rama) a otro branch master (o superior) y se combinan.
+
 ## Clientes Gráficos:
 
-* SourceTree: Disponible para Windows y MAC. Versión de prueba gratuita.
-* GitKraken: Disponible para Windows, Linux y MAC.
+* **SourceTree**: Disponible para Windows y MAC. Versión de prueba gratuita.
+* **GitKraken**: Disponible para Windows, Linux y MAC.
 
 ## Servicios de repositorios remotos con control de errores:
 
-* GitHub
-* GitLab
-* Bitbucket
+* **GitHub**
+* **GitLab**
+* **Bitbucket**
 
 ## Comandos útiles para git:
 
@@ -48,7 +50,7 @@ El control de versiones consiste básicamente en mantener el control de los camb
 * Crear un directorio: **mkdir nombreDirectorio**
 * Cambiar de directorio: **cd RutaDelNuevoDirectorio**
 * Mostrar la lista de ficheros de un directorio: **ls**
-* Borrar un fichero: **rm nombreArchivo** 
+* Borrar un fichero: **rm nombreArchivo**
 * Cambiar (mover) un fichero de directorio: **move nombreDirectorio**
 
 **En Control de versiones local**
@@ -56,7 +58,7 @@ El control de versiones consiste básicamente en mantener el control de los camb
 * Crear un repositorio local en nuestra máquina: **git init**
 * Preparar ficheros para ser confirmados en el repositorio local: **git add** *NombreFichero*
 * Confirmar cambios en un repositorio local: **git commit -m "Comentario con los cambios realizados"**
-* Deshacer las operaciones de preparar y confirmar: **git reset commit** 
+* Deshacer las operaciones de preparar y confirmar: **git reset commit**
 * Identificar el estado de un fichero o ficheros en un repositorio local: **git status**. Se realiza posteriormente a **git add**.
 
 **En control de versiones centralizado**
