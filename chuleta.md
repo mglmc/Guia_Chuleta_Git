@@ -29,6 +29,7 @@ El control de versiones consiste básicamente en mantener el control de los camb
   - Entre repositorios: Petición que se hace al desarrollador de que los cambios hechos por elfork sean incorporados al repositorio original.
 
 * **Merge**: La operación donde se une un branch (una rama) a otro branch master (o superior) y se combinan.
+* **Branch** : cuando quieres trabajar en paralelo sobre un mismo proyecto y no quieres interferir o llenar commits(cambios) la rama master(principal) te haces tu propia rama para trabajar sobre ella y cuando hayas terminado la unes (haces merge).
 
 ## Clientes Gráficos:
 
@@ -95,6 +96,8 @@ El control de versiones consiste básicamente en mantener el control de los camb
 * **git remote show** *RepRemoto* : Para mostrar más información del repositorio remoto
 * **git remote rename** : Para renombrar una referencia a un repositorio remoto
 * **git remote rm** *RepRemoto*: Para eliminar un repositorio remoto
+* **git push -u origin master**: el -u es para que GitHub sepa a quien te estas refiriendo y así para la próxima vez solo tengas que hacer git push
+
 
 
 ## Comandos útiles para la terminal:
@@ -113,3 +116,11 @@ El control de versiones consiste básicamente en mantener el control de los camb
 * Se recomienda ante dudas lo primero es hacer **git status** para saber donde estas y donde git te puede dar alguna pista sobre que puedes hacer.
 * Cuando hagas un git branch recordar hacer el checkout [nombre de la nueva rama] para empezar a trabajar en dicha rama.
 * Para empezar se recomienda hacer este turial de git:  https://try.github.io/
+
+## Referencias:
+
+* https://gist.github.com/jelcaf/1404619
+* http://rogerdudler.github.io/git-guide/index.es.html
+* https://git-scm.com/book/es/v1/Fundamentos-de-Git-Trabajando-con-repositorios-remotos
+* https://aprendiendoausarlinux.wordpress.com/2011/11/18/el-comando-cat-en-unix/
+* https://gist.github.com/evantoli/f8c23a37eb3558ab8765
