@@ -110,6 +110,17 @@ El control de versiones consiste básicamente en mantener el control de los camb
 * **cat** : concatena archivos y/o los muestra como salida.
 * **/*.extension** : para referirnos a todos las extensiones de un directorio.
 
+## Atributos de Comandos
+
+* **u** : para hacer tracking del repositorio anterior y así tener sincronizado los repositorios
+
+* **m** : de master(rama maestra)
+
+* **--staged** : para referirse al estado index por ej: git diff --staged
+
+* **rm** : remove
+
+* **rm -rf .git** : para eliminar un git init
 
 ## Tips:
 
