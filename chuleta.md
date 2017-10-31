@@ -1,4 +1,5 @@
-#Chuleta de control de versiones con git
+
+# Chuleta de control de versiones con git
 
 _Indica qué tenemos que saber y saber hacer en la asignatura de Proyectos de Sistemas Electrónicos._
 
