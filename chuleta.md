@@ -2,7 +2,7 @@
 
 ##### POR HACER
 
-_Indica qué tenemos que saber y saber hacer en la asignatura de Proyectos de Sistemas Electrónicos. _
+_Indica qué tenemos que saber y saber hacer en la asignatura de Proyectos de Sistemas Electrónicos._
 
 ## Control de versiones
 El control de versiones consiste básicamente en mantener el control de los cambios que se realizan en el tiempo sobre un conjunto de archivos integrados en un repositorio.
@@ -47,50 +47,50 @@ El control de versiones consiste básicamente en mantener el control de los camb
 **En el interprete de comandos de git-bash**
 
 * **pwd**: Mostrar en que directorio estamos.
-* **mkdir nombreDirectorio**: Crear un directorio.
-* **cd RutaDelNuevoDirectorio**: Cambiar de directorio.
+* **mkdir** _nombreDirectorio_: Crear un directorio.
+* **cd** _RutaDelNuevoDirectorio_: Cambiar de directorio.
 * **ls**: Mostrar la lista de ficheros de un directorio.
-* **rm nombreArchivo**: Borrar un fichero.
-* **move nombreDirectorio**: Cambiar (mover) un fichero de directorio.
+* **rm** _nombreArchivo_: Borrar un fichero.
+* **move** _nombreDirectorio_: Cambiar (mover) un fichero de directorio.
 
 **En Control de versiones local**
 
 * **git init**: Crear un repositorio local en nuestra máquina.
-* **git add** *NombreFichero*: Preparar ficheros para ser confirmados en el repositorio local.
-* **git commit -m "Comentario con los cambios realizados"**: Confirmar cambios en un repositorio local.
+* **git add** _NombreFichero_: Preparar ficheros para ser confirmados en el repositorio local.
+* **git commit -m** _"Comentario con los cambios realizados"_: Confirmar cambios en un repositorio local.
 * **git reset commit**: Deshacer las operaciones de preparar y confirmar.
 * **git status**: Identificar el estado de un fichero o ficheros en un repositorio local.
 
 **En control de versiones centralizado**
 
-* **git config --global http.proxy 'proxy.satd.uma.es:3120'**: Configurar git para que trabaje tras un proxy.
-* **git clone** *URLrepositorio*: Replicar un repositorio remoto localmente en nuestra máquina (pej: git clone http://github.com/arduino/Arduino Arduino_Code).
-*  **git remote add origin** *URLservidorRemoto*: Replicar un repositorio local en un servidor remoto:(pej: git remote add origin https://github.com/uma-dte-docencia/chuleta-git-2017-18-internautas-1).
+* **git config** _--global http.proxy 'proxy.satd.uma.es:3120'_: Configurar git para que trabaje tras un proxy.
+* **git clone** _URLrepositorio_: Replicar un repositorio remoto localmente en nuestra máquina (pej: git clone http://github.com/arduino/Arduino Arduino_Code).
+*  **git remote add origin** _URLservidorRemoto_: Replicar un repositorio local en un servidor remoto:(pej: git remote add origin https://github.com/uma-dte-docencia/chuleta-git-2017-18-internautas-1).
 * **git pull**: Traer los cambios de un repositorio remoto a un repositorio local.
-* **git push** *NombreRemoto NombreRama*: Enviar los cambios de un repositorio a uno remoto (pej: git push origin master) si ya se esta en la rama master basta con hacer git push.
+* **git push** _NombreRemoto NombreRama_: Enviar los cambios de un repositorio a uno remoto (pej: git push origin master) si ya se esta en la rama master basta con hacer git push.
 
 **En control de versiones distribuido**
 
-* **git branch** *NombreNuevaRama*: Crear una rama en un repositorio local.
-* **git checkout** *NombreRama*: Cambiar de rama en la copia local.
-* **git push origin** *NombreRama*: Enviar la rama al repositorio remoto.
+* **git branch** _NombreNuevaRama_: Crear una rama en un repositorio local.
+* **git checkout** _NombreRama_: Cambiar de rama en la copia local.
+* **git push origin** _NombreRama_: Enviar la rama al repositorio remoto.
 * Realizar un pull request entre dos ramas de un repositorio remoto:
 * Realizar un pull request entre dos repositorios que resultaron de un Fork:
 
 **Otros comandos de interes**
 
 * **git diff** : Para saber las diferencias en un commit (en el/los archivos) ej: git diff HEAD
+* **git add ./*** : Para añadir todos los archivos del directorio
 * **git log** : Para ver los cambios(todos los commits) y su HEAD.
 * **git reset** : Para unstage archivos ej: git reset archivo.txt
-* **git branch -d** *BranchName* : Para eliminar un branch (la instruccion branch también permite crear y listar ramas mediante otros atributos).
+* **git branch -d** _BranchName_ : Para eliminar un branch (la instruccion branch también permite crear y listar ramas mediante otros atributos).
 * **git merge** : Para unir tu rama a otra. ej: git merge rama2
-* **git config --global http.proxy 'proxy.wifi.uma.es:3128'** : Para redes con proxy
-* **git add** *Origin ArchivosAModificar* ->origin es el nombre (alias) que se le da al repositorio al que le vas a hacer stage
-* **git fetch** *RepRemoto* : Para recuperar datos remotos de tus repositorios remotos
+* **git add** Origin _ArchivosAModificar_ :origin es el nombre (alias) que se le da al repositorio al que le vas a hacer stage
+* **git fetch** _RepRemoto_ : Para recuperar datos remotos de tus repositorios remotos
 * **git stash** : Cuando trabajas en un archivo (y lo modificas) en un repositorio y quieres cambiar de rama se hace un preguardado que tienes que anular con este comando.
 * **git pull** : Para recuperar y unir la rama remota con la rama actual.
-* **git push** *RepRemoto Rama* : Para enviar un repositorio local a uno remoto Ej: git push origin master
-* **git rm** *Archivos* : Para eliminar algún archivo del repositorio. ej: git rm *'*.txt'
+* **git push** _RepRemoto Rama_ : Para enviar un repositorio local a uno remoto Ej: git push origin master
+* **git rm** _Archivos_ : Para eliminar algún archivo del repositorio. ej: git rm *'*.txt'
 * **git remote -v** : Muestra los repositorios remotos que tienes con su respectivo enlace
 * **git remote** : Muestra los alias de los repositorios remotos que tienes
 * **git remote add** *Alias RepRemoto* : Para añadir repositorios remotos y asignarle un alias
@@ -107,10 +107,11 @@ El control de versiones consiste básicamente en mantener el control de los camb
 * **mkdir -p** : crea ramas de directorios que no existen.
 * **man [comando]** : para consultar en el manual dicho comando.
 * **cat** : concatena archivos y/o los muestra como salida.
-* ***.extension** : para referirnos a todos las extensiones de un directorio.
+* **/*.extension** : para referirnos a todos las extensiones de un directorio.
 
 
 ## Tips:
 
 * Se recomienda ante dudas lo primero es hacer **git status** para saber donde estas y donde git te puede dar alguna pista sobre que puedes hacer.
 * Cuando hagas un git branch recordar hacer el checkout [nombre de la nueva rama] para empezar a trabajar en dicha rama.
+* Para empezar se recomienda hacer este turial de git:  https://try.github.io/
