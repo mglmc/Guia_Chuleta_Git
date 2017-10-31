@@ -1,6 +1,4 @@
-﻿### Chuleta de control de versiones con git
-
-##### POR HACER
+#Chuleta de control de versiones con git
 
 _Indica qué tenemos que saber y saber hacer en la asignatura de Proyectos de Sistemas Electrónicos._
 
@@ -74,8 +72,7 @@ El control de versiones consiste básicamente en mantener el control de los camb
 * **git branch** _NombreNuevaRama_: Crear una rama en un repositorio local.
 * **git checkout** _NombreRama_: Cambiar de rama en la copia local.
 * **git push origin** _NombreRama_: Enviar la rama al repositorio remoto.
-* Realizar un pull request entre dos ramas de un repositorio remoto:
-* Realizar un pull request entre dos repositorios que resultaron de un Fork:
+* Para realizar un pull request entre dos ramas de un repositorio remoto y entre dos repositorios que resultaron de un Fork el proceso hay que hacerlo a través de la interfaz de la pagina de git (en este caso Github) o por un cliente de escritorio (por ejemplo SourceTree) donde se le explicará al los encargados del repositorio original o la rama master (o superior) de los cambios realizados y la justificación para que sea añadido en dicha rama a traves de un **merge**.
 
 **Otros comandos de interes**
 
