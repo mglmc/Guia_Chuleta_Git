@@ -113,18 +113,15 @@ El control de versiones consiste básicamente en mantener el control de los camb
 ## Atributos de Comandos
 
 * **u** : para hacer tracking del repositorio anterior y así tener sincronizado los repositorios
-
 * **m** : de master(rama maestra)
-
 * **--staged** : para referirse al estado index por ej: git diff --staged
-
 * **rm** : remove
-
 * **rm -rf .git** : para eliminar un git init
 
 ## Tips:
 
 * Se recomienda ante dudas lo primero es hacer **git status** para saber donde estas y donde git te puede dar alguna pista sobre que puedes hacer.
+* Si quieres volver a quitar el proxy de github tienes que abrir con permiso (sudo) un editor de texto el config de github Ej: sudo **open ~/.gitconfig** y comenta (con #) las lineas donde esté configurado el proxy **#proxy = proxy.wifi.uma.es:3128** y **#[http]**.
 * Cuando hagas un git branch recordar hacer el checkout [nombre de la nueva rama] para empezar a trabajar en dicha rama.
 * Para empezar se recomienda hacer este turial de git:  https://try.github.io/
 
