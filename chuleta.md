@@ -135,6 +135,7 @@ El control de versiones consiste básicamente en mantener el control de los camb
 * Si quieres volver a quitar el proxy de github tienes que abrir con permiso (sudo) un editor de texto el config de github Ej: sudo **open ~/.gitconfig** y comenta (con #) las lineas donde esté configurado el proxy **#proxy = proxy.wifi.uma.es:3128** y **#[http]**.
 * Cuando hagas un git branch recordar hacer el checkout [nombre de la nueva rama] para empezar a trabajar en dicha rama.
 * Para empezar se recomienda hacer este turial de git:  https://try.github.io/
+* Para saber como escribir el Readme.md -> [Página muy útil](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 
 ## Referencias:
 
