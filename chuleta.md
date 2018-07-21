@@ -35,6 +35,7 @@ El control de versiones consiste básicamente en mantener el control de los camb
 
 * **SourceTree**: Disponible para Windows y MAC.
 * **GitKraken**: Disponible para Windows, Linux y MAC.
+* **GitHub Desktop**: Disponible para Windows y MAC.
 
 ## Servicios de repositorios remotos con control de errores:
 
@@ -98,6 +99,16 @@ El control de versiones consiste básicamente en mantener el control de los camb
 * **git remote rm** *RepRemoto*: Para eliminar un repositorio remoto
 * **git push -u origin master**: el -u es para que GitHub sepa a quien te estas refiriendo y así para la próxima vez solo tengas que hacer git push
 
+## Operaciones específicas:
+##### Clonar un repositorio y crear uno nuevo identico (mirroring)[Fuente](https://help.github.com/articles/duplicating-a-repository/) :
+1. Clonar el repositorio:
+*git clone --bare https://github.com/exampleuser/old-repository.git*
+2. Nos movemos a la ubicación donde se ubica el repositorio clonado con el comando *cd*
+3. Push con el atributo mirror:
+*git push --mirror https://github.com/exampleuser/new-repository.git*
+4. Movemos el directorio uno arriba *cd ..*
+5. Eliminamos el repositorio temporal creado en el paso 1:
+*rm -rf old-repository.git*
 
 
 ## Comandos útiles para la terminal:
