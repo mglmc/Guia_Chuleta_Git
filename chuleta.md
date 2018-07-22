@@ -98,6 +98,12 @@ El control de versiones consiste básicamente en mantener el control de los camb
 
 ## Operaciones específicas:
 
+##### Añadir las modificaciones al repositorio
+1. *cd* _nombreDirectorio_
+2. *git add* _nombreArchivoModificado_
+3. *git commit -m "comenario sobre las modificaciones"*
+4. *git push*
+
 ##### Clonar un repositorio y crear uno nuevo identico (mirroring)[Fuente](https://help.github.com/articles/duplicating-a-repository/):
 
 1. Clonar el repositorio:
@@ -128,6 +134,7 @@ El control de versiones consiste básicamente en mantener el control de los camb
 * **GitHub**
 * **GitLab**
 * **Bitbucket**
+
 ## Referencias:
 
 * https://gist.github.com/jelcaf/1404619
