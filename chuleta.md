@@ -60,7 +60,6 @@ El control de versiones consiste básicamente en mantener el control de los camb
 **En control de versiones remoto**
 
 * **origin**: Es el nombre que se le da al servidor origen (no es un comando).
-
 * **git config** _--global http.proxy 'proxy.satd.uma.es:3120'_: Configurar git para que trabaje con un proxy.
 * **git clone** _URLrepositorio_: Replicar un repositorio remoto localmente en nuestra máquina (pej: git clone http://github.com/arduino/Arduino Arduino_Code).
 * **git remote add origin** _URLservidorRemoto_: Añade un repositorio remoto para poder trabajar con el (pej: git remote add origin https://github.com/uma-dte-docencia/chuleta-git-2017-18-internautas-1).
