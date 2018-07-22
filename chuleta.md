@@ -20,16 +20,102 @@ El control de versiones consiste básicamente en mantener el control de los camb
 
 * **Clone**: Replica un repositorio entero con todo su historial de cambios y actualiza el directorio local.
 * **Add**: Realiza la copia de un fichero modificado, poniéndola en la zona de preparación para ser confirmada.
-* **Commit**: Acción que se realiza cuando queremos que los cambios que hemos realizado en el fichero se suban al repositorio.
+* **Commit**: Acción que se realiza cuando queremos que los cambios que hemos realizado en el fichero se suban al repositorio.(Tras el commit es necesario el Push)
 * **Push**: Es la operación en la que se envian al repositorio centralizado un commit o un conjunto de commits.
 * **Pull**: Es la operación en la que se actualiza el repositorio local y el directorio local con commits que provienen del repositio remoto. Es la acción contraria a push.
 * **Fork**: Clone que se realiza dentro del mismo servidor. Al repositorio original se le llama UPSTREAM.
 * **Pull Request**:
   - Entre Ramas: Petición que se hace al desarrollador de una rama para que sus cambios se unan con la rama principal
-  - Entre repositorios: Petición que se hace al desarrollador de que los cambios hechos por elfork sean incorporados al repositorio original.
+  - Entre repositorios: Petición que se hace al desarrollador de que los cambios hechos por el fork sean incorporados al repositorio original.
 
 * **Merge**: La operación donde se une un branch (una rama) a otro branch master (o superior) y se combinan.
-* **Branch** : cuando quieres trabajar en paralelo sobre un mismo proyecto y no quieres interferir o llenar commits(cambios) la rama master(principal) te haces tu propia rama para trabajar sobre ella y cuando hayas terminado la unes (haces merge).
+* **Branch** : cuando quieres trabajar en paralelo sobre un mismo proyecto y no quieres interferir o llenar commits (cambios) la rama master(principal) te haces tu propia rama para trabajar sobre ella y cuando hayas terminado la unes (haces merge).
+
+## Comandos útiles para git:
+
+**Para el manejo de ficheros en el terminal**
+
+* **pwd**: Mostrar en que directorio estamos.
+* **mkdir** _nombreDirectorio_: Crear un directorio.
+* **cd** _RutaDelNuevoDirectorio_: Cambiar de directorio.
+* **ls**: Mostrar la lista de ficheros de un directorio.
+* **rm** _nombreArchivo_: Borrar un fichero.
+* **move** _nombreDirectorio_: Cambiar (mover) un fichero de directorio.
+* **ls -all** : lista todos los archivos incluidos los que empiezan con punto.
+* **cd ..**  : para volver atrás en el directorio.
+* **touch** : crea un archivo vacío.
+* **mkdir -p** : crea ramas de directorios que no existen.
+* **man [comando]** : para consultar en el manual dicho comando.
+* **cat** : concatena archivos y/o los muestra como salida.
+* **/*.extension** : para referirnos a todos las extensiones de un directorio.
+
+**En control de versiones local**
+
+* **git init**: Crear un repositorio local en nuestra máquina.
+* **git add** _NombreFichero_: Preparar ficheros para ser confirmados en el repositorio local.
+* **git commit -m** _"Comentario con los cambios realizados"_: Confirmar cambios en un repositorio local.
+* **git reset commit**: Deshacer las operaciones de preparar y confirmar.
+* **git status**: Identificar el estado de un fichero o ficheros en un repositorio local.
+
+**En control de versiones remoto**
+
+* **origin**: Es el nombre que se le da al servidor origen (no es un comando).
+
+* **git config** _--global http.proxy 'proxy.satd.uma.es:3120'_: Configurar git para que trabaje con un proxy.
+* **git clone** _URLrepositorio_: Replicar un repositorio remoto localmente en nuestra máquina (pej: git clone http://github.com/arduino/Arduino Arduino_Code).
+* **git remote add origin** _URLservidorRemoto_: Añade un repositorio remoto para poder trabajar con el (pej: git remote add origin https://github.com/uma-dte-docencia/chuleta-git-2017-18-internautas-1).
+* **git pull**: Traer los cambios de un repositorio remoto a un repositorio local.
+* **git push** _NombreRemoto NombreRama_: Enviar los cambios de un repositorio a uno remoto (pej: git push origin master) si ya se esta en la rama master basta con hacer git push.
+* **git fetch** _[remote-name]_: A diferencia de *git pull* solo actualiza los datos del remoto sin hacer efecto en los archivos en los que estes trabajando.  
+* **git remote -v** : Muestra los repositorios remotos que tienes con su respectivo enlace.
+* **git remote** : Muestra los alias de los repositorios remotos que tienes.
+* **git remote add** *Alias RepRemoto* : Para añadir repositorios remotos y asignarle un alias.
+* **git remote show** *RepRemoto* : Para mostrar más información del repositorio remoto.
+* **git remote rename** : Para renombrar una referencia a un repositorio remoto.
+* **git remote rm** *RepRemoto*: Para eliminar un repositorio remoto.
+
+**En control de versiones distribuido**
+
+* **git branch** _NombreNuevaRama_: Crear una rama en un repositorio local.
+* **git checkout** _NombreRama_: Cambiar de rama en la copia local.
+* **git push origin** _NombreRama_: Enviar la rama al repositorio remoto.
+* Para realizar un pull request entre dos ramas de un repositorio remoto y entre dos repositorios que resultaron de un Fork el proceso hay que hacerlo a través de la interfaz de la pagina de git (en este caso Github) o por un cliente de escritorio (por ejemplo SourceTree) donde se le explicará al los encargados del repositorio original o la rama master (o superior) de los cambios realizados y la justificación para que sea añadido en dicha rama a traves de un **merge**.
+
+**Otros comandos de interes**
+
+* **git diff** : Para saber las modificaciones o cambios en un commit (en el/los archivos) ej: git diff HEAD.
+* **git add ./*** : Para añadir todos los archivos del directorio.
+* **git log** : Para ver los cambios (todos los commits) y su HEAD.
+* **git reset** : Para unstage archivos ej: git reset archivo.txt
+* **git branch -d** _BranchName_ : Para eliminar un branch (la instruccion branch también permite crear y listar ramas mediante otros atributos).
+* **git merge** : Para unir tu rama a otra. ej: git merge rama2
+* **git add** Origin _ArchivosAModificar_ :origin es el nombre (alias) que se le da al repositorio al que le vas a hacer stage.
+* **git stash** : Cuando trabajas en un archivo (y lo modificas) en un repositorio y quieres cambiar de rama se hace un preguardado que tienes que anular con este comando.
+* **git rm** _Archivos_ : Para eliminar algún archivo del repositorio. ej: git rm *'*.txt'
+* **rm -rf .git** : para eliminar un git init
+* **git status** para saber donde estas y donde git te puede dar alguna pista sobre que puedes hacer.
+
+
+## Operaciones específicas:
+
+##### Clonar un repositorio y crear uno nuevo identico (mirroring)[Fuente](https://help.github.com/articles/duplicating-a-repository/):
+
+1. Clonar el repositorio:
+*git clone --bare https://github.com/exampleuser/old-repository.git*
+2. Nos movemos a la ubicación donde se ubica el repositorio clonado con el comando *cd*
+3. Push con el atributo mirror:
+*git push --mirror https://github.com/exampleuser/new-repository.git*
+4. Movemos el directorio uno arriba *cd ..*
+5. Eliminamos el repositorio temporal creado en el paso 1:
+*rm -rf old-repository.git*
+
+## Tips:
+
+* Se recomienda ante dudas lo primero es hacer **git status**.
+* Si quieres volver a quitar el proxy de github tienes que abrir con permiso (sudo) un editor de texto el config de github Ej: sudo **open ~/.gitconfig** y comenta (con #) las lineas donde esté configurado el proxy **#proxy = proxy.wifi.uma.es:3128** y **#[http]**.
+* Cuando hagas un git branch recordar hacer el **checkout** [nombre de la nueva rama] para empezar a trabajar en dicha rama.
+* Para empezar se recomienda hacer este turial de git:  https://try.github.io/
+* Para saber como escribir el Readme.md -> [Página muy útil](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 
 ## Clientes Gráficos:
 
@@ -42,101 +128,6 @@ El control de versiones consiste básicamente en mantener el control de los camb
 * **GitHub**
 * **GitLab**
 * **Bitbucket**
-
-## Comandos útiles para git:
-
-**En el interprete de comandos de git-bash**
-
-* **pwd**: Mostrar en que directorio estamos.
-* **mkdir** _nombreDirectorio_: Crear un directorio.
-* **cd** _RutaDelNuevoDirectorio_: Cambiar de directorio.
-* **ls**: Mostrar la lista de ficheros de un directorio.
-* **rm** _nombreArchivo_: Borrar un fichero.
-* **move** _nombreDirectorio_: Cambiar (mover) un fichero de directorio.
-
-**En Control de versiones local**
-
-* **git init**: Crear un repositorio local en nuestra máquina.
-* **git add** _NombreFichero_: Preparar ficheros para ser confirmados en el repositorio local.
-* **git commit -m** _"Comentario con los cambios realizados"_: Confirmar cambios en un repositorio local.
-* **git reset commit**: Deshacer las operaciones de preparar y confirmar.
-* **git status**: Identificar el estado de un fichero o ficheros en un repositorio local.
-
-**En control de versiones centralizado**
-
-* **git config** _--global http.proxy 'proxy.satd.uma.es:3120'_: Configurar git para que trabaje tras un proxy.
-* **git clone** _URLrepositorio_: Replicar un repositorio remoto localmente en nuestra máquina (pej: git clone http://github.com/arduino/Arduino Arduino_Code).
-*  **git remote add origin** _URLservidorRemoto_: Replicar un repositorio local en un servidor remoto:(pej: git remote add origin https://github.com/uma-dte-docencia/chuleta-git-2017-18-internautas-1).
-* **git pull**: Traer los cambios de un repositorio remoto a un repositorio local.
-* **git push** _NombreRemoto NombreRama_: Enviar los cambios de un repositorio a uno remoto (pej: git push origin master) si ya se esta en la rama master basta con hacer git push.
-
-**En control de versiones distribuido**
-
-* **git branch** _NombreNuevaRama_: Crear una rama en un repositorio local.
-* **git checkout** _NombreRama_: Cambiar de rama en la copia local.
-* **git push origin** _NombreRama_: Enviar la rama al repositorio remoto.
-* Para realizar un pull request entre dos ramas de un repositorio remoto y entre dos repositorios que resultaron de un Fork el proceso hay que hacerlo a través de la interfaz de la pagina de git (en este caso Github) o por un cliente de escritorio (por ejemplo SourceTree) donde se le explicará al los encargados del repositorio original o la rama master (o superior) de los cambios realizados y la justificación para que sea añadido en dicha rama a traves de un **merge**.
-
-**Otros comandos de interes**
-
-* **git diff** : Para saber las diferencias en un commit (en el/los archivos) ej: git diff HEAD
-* **git add ./*** : Para añadir todos los archivos del directorio
-* **git log** : Para ver los cambios(todos los commits) y su HEAD.
-* **git reset** : Para unstage archivos ej: git reset archivo.txt
-* **git branch -d** _BranchName_ : Para eliminar un branch (la instruccion branch también permite crear y listar ramas mediante otros atributos).
-* **git merge** : Para unir tu rama a otra. ej: git merge rama2
-* **git add** Origin _ArchivosAModificar_ :origin es el nombre (alias) que se le da al repositorio al que le vas a hacer stage
-* **git fetch** _RepRemoto_ : Para recuperar datos remotos de tus repositorios remotos
-* **git stash** : Cuando trabajas en un archivo (y lo modificas) en un repositorio y quieres cambiar de rama se hace un preguardado que tienes que anular con este comando.
-* **git pull** : Para recuperar y unir la rama remota con la rama actual.
-* **git push** _RepRemoto Rama_ : Para enviar un repositorio local a uno remoto Ej: git push origin master
-* **git rm** _Archivos_ : Para eliminar algún archivo del repositorio. ej: git rm *'*.txt'
-* **git remote -v** : Muestra los repositorios remotos que tienes con su respectivo enlace
-* **git remote** : Muestra los alias de los repositorios remotos que tienes
-* **git remote add** *Alias RepRemoto* : Para añadir repositorios remotos y asignarle un alias
-* **git remote show** *RepRemoto* : Para mostrar más información del repositorio remoto
-* **git remote rename** : Para renombrar una referencia a un repositorio remoto
-* **git remote rm** *RepRemoto*: Para eliminar un repositorio remoto
-* **git push -u origin master**: el -u es para que GitHub sepa a quien te estas refiriendo y así para la próxima vez solo tengas que hacer git push
-
-## Operaciones específicas:
-##### Clonar un repositorio y crear uno nuevo identico (mirroring)[Fuente](https://help.github.com/articles/duplicating-a-repository/) :
-1. Clonar el repositorio:
-*git clone --bare https://github.com/exampleuser/old-repository.git*
-2. Nos movemos a la ubicación donde se ubica el repositorio clonado con el comando *cd*
-3. Push con el atributo mirror:
-*git push --mirror https://github.com/exampleuser/new-repository.git*
-4. Movemos el directorio uno arriba *cd ..*
-5. Eliminamos el repositorio temporal creado en el paso 1:
-*rm -rf old-repository.git*
-
-
-## Comandos útiles para la terminal:
-
-* **ls -all** : lista todos los archivos incluidos los que empiezan con punto.
-* **cd ..**  : para volver atrás en el directorio.
-* **touch** : crea un archivo vacío.
-* **mkdir -p** : crea ramas de directorios que no existen.
-* **man [comando]** : para consultar en el manual dicho comando.
-* **cat** : concatena archivos y/o los muestra como salida.
-* **/*.extension** : para referirnos a todos las extensiones de un directorio.
-
-## Atributos de Comandos
-
-* **u** : para hacer tracking del repositorio anterior y así tener sincronizado los repositorios
-* **m** : de master(rama maestra)
-* **--staged** : para referirse al estado index por ej: git diff --staged
-* **rm** : remove
-* **rm -rf .git** : para eliminar un git init
-
-## Tips:
-
-* Se recomienda ante dudas lo primero es hacer **git status** para saber donde estas y donde git te puede dar alguna pista sobre que puedes hacer.
-* Si quieres volver a quitar el proxy de github tienes que abrir con permiso (sudo) un editor de texto el config de github Ej: sudo **open ~/.gitconfig** y comenta (con #) las lineas donde esté configurado el proxy **#proxy = proxy.wifi.uma.es:3128** y **#[http]**.
-* Cuando hagas un git branch recordar hacer el checkout [nombre de la nueva rama] para empezar a trabajar en dicha rama.
-* Para empezar se recomienda hacer este turial de git:  https://try.github.io/
-* Para saber como escribir el Readme.md -> [Página muy útil](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
-
 ## Referencias:
 
 * https://gist.github.com/jelcaf/1404619
