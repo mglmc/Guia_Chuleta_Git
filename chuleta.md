@@ -76,7 +76,7 @@ El control de versiones consiste básicamente en mantener el control de los camb
 **En control de versiones distribuido**
 
 * **git branch** _[NombreNuevaRama]_: Crear una rama en un repositorio local.
-  * **git branch -f master HEAD~3**: Crea una rama nueva y .
+  * **git branch -f master HEAD~3**: Crea una rama nueva y fuerza a que el master sea donde está el HEAD pero 3 commit atras.
 * **git checkout** _[NombreRama]_: Cambiar de rama en la copia local.
   * **git checkout -b** _[NombreNuevaRama]_: Cambia de rama y crea una nueva.
   * **git checkout** _[Cambio]_: El cambio puede ser a un commit específico.
@@ -122,9 +122,10 @@ El control de versiones consiste básicamente en mantener el control de los camb
 
 * Se recomienda ante dudas lo primero es hacer **git status**.
 * Si quieres volver a quitar el proxy de github tienes que abrir con permiso (sudo) un editor de texto el config de github Ej: sudo **open ~/.gitconfig** y comenta (con #) las lineas donde esté configurado el proxy **#proxy = proxy.wifi.uma.es:3128** y **#[http]**.
-* Cuando hagas un git branch recordar hacer el **checkout** [nombre de la nueva rama] para empezar a trabajar en dicha rama.
+* Cuando hagas un **git branch** recordar hacer el **checkout** [nombre de la nueva rama] para empezar a trabajar en dicha rama.
 * Para empezar se recomienda hacer este turial de git:  https://try.github.io/
-* Para saber como escribir el Readme.md -> [Página muy útil](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+* Para saber como escribir el **Readme.md** -> [Página muy útil](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+* Usando el **caracter** (**^**). Nos referimos al padre (parent) del commit. p.e: Poniendo _master^_ es equivalente a decir el primer pariente del master.
 
 ## Clientes Gráficos:
 
