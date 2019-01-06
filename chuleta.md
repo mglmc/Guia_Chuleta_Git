@@ -7,16 +7,15 @@
 * **Repositorio**: sitio donde se ubican los archivos del proyecto con su respectivo control de versiones.
 * **Repositorio local**: El proyecto se ubica y controla en una maquina local.
 * **Repositorio remoto**: El proyecto se ubica en un servidor centralizado.
-* **log**: Registro Que muestra todos los cambios que se han realizado en un repositorio.
-* **Conflicto**: Problema que surge cuando los clientes realizan cambios incompatibles entre si (al intentar hacer un merge).
+* **Conflicto**: Problema que surge cuando los usuarios realizan cambios sobre un archivo del proyecto incompatibles entre si (al intentar hacer un merge).
 * **Control de versiones**: El control de versiones consiste básicamente en mantener el control de los cambios que se realizan en el tiempo sobre un conjunto de archivos integrados en un repositorio.
 
 
 ## Operaciones:  
 
-* **Clone**: Replica un repositorio entero con todo su historial de cambios y actualiza el directorio local.
-* **Add**: Realiza la copia de un fichero modificado, poniéndola en la zona de preparación para ser confirmada.
-* **Commit**: Acción que se realiza cuando queremos que los cambios que hemos realizado en el fichero se suban al repositorio.(Tras el commit es necesario el **Push**).
+* **Clone**: Replica un repositorio entero con todo su historial de cambios a el directorio local.
+* **Add**: Realiza la copia de un fichero modificado, poniéndola en la zona de preparación para ser confirmada _(**stage** changes)_.
+* **Commit**: Acción que se realiza cuando queremos que los cambios que hemos realizado en el fichero se queden registrados en el repositorio. (Tras el commit es necesario el **Push**).
 * **Push**: Es la operación en la que se envian al repositorio centralizado un commit o un conjunto de commits.
 * **Pull**: Es la operación en la que se actualiza el repositorio local y el directorio local con commits que provienen del repositio remoto. Es la acción contraria a push.
 * **Fork**: Clone que se realiza dentro del mismo servidor. Al repositorio original se le llama UPSTREAM.
@@ -24,7 +23,7 @@
   - Entre Ramas: Petición que se hace al desarrollador de una rama para que sus cambios se unan con la rama principal
   - Entre repositorios: Petición que se hace al desarrollador de que los cambios hechos por el fork sean incorporados al repositorio original.
 * **Merge**: La operación donde se une un branch (una rama) a otro branch master (o superior) y se combinan.
-* **Branch** : cuando quieres trabajar en paralelo sobre un mismo proyecto y no quieres interferir o llenar de commits (cambios) la rama master(principal), te haces tu propia rama para trabajar sobre ella y cuando hayas terminado la unes (haces merge).
+* **Branch**: cuando quieres trabajar en paralelo sobre un mismo proyecto y no quieres interferir o llenar de commits (cambios) la rama master (principal), te haces tu propia rama para trabajar sobre ella y cuando hayas terminado la unes (haces merge).
 
 ## Comandos:
 
@@ -33,7 +32,11 @@
 * **git init**: Crear un repositorio local en nuestra máquina.
 * **git add** _[NombreFichero]_: Preparar ficheros para ser confirmados en el repositorio local.
 * **git commit -m** _"Comentario con los cambios realizados"_: Confirmar cambios en un repositorio local.
+  * **-m**: Para añadir el mensaje.
+  * **-a**: Hace el _stage_ directamente (te saltas el _git add_) puedes usarlo junto con el otro comando (-ma).
 * **git reset commit**: Deshacer las operaciones de preparar y confirmar.
+  * **git reset --soft**
+  * **git reset --hard**
 * **git status**: Identificar el estado de un fichero o ficheros en un repositorio local.
 
 **En control de versiones remoto**
@@ -67,17 +70,17 @@ Para realizar un pull request entre dos ramas de un repositorio remoto y entre d
 **Otros comandos de interes**
 
 * **git diff** : Para saber las modificaciones o cambios en un commit (en el/los archivos) ej: git diff HEAD.
-* **git add ./*** : Para añadir todos los archivos del directorio.
-* **git log** : Para ver los cambios (todos los commits) y su HEAD.
-* **git reset** : Para unstage archivos ej: git reset archivo.txt
-* **git branch -d** _[BranchName]_ : Para eliminar un branch (la instruccion branch también permite crear y listar ramas mediante otros atributos).
-* **git merge** : Para unir tu rama a otra. ej: git merge rama2
+* **git add ./***: Para añadir todos los archivos del directorio.
+* **git log**: Para ver los cambios (todos los commits) y su HEAD.
+* **git reset**: Para unstage archivos ej: git reset archivo.txt
+* **git branch -d** _[BranchName]_: Para eliminar un branch (la instruccion branch también permite crear y listar ramas mediante otros atributos).
+* **git merge**: Para unir tu rama a otra. ej: git merge rama2
 * **git add** Origin _[ArchivosAModificar]_ :origin es el nombre (alias) que se le da al repositorio al que le vas a hacer stage.
-* **git stash** : Cuando trabajas en un archivo (y lo modificas) en un repositorio y quieres cambiar de rama se hace un preguardado que tienes que anular con este comando.
-* **git rm** _[Archivos]_ : Para eliminar algún archivo del repositorio. ej: git rm *'*.txt'
-* **rm -rf .git** : para eliminar un git init
+* **git stash**: Cuando trabajas en un archivo (y lo modificas) en un repositorio y quieres cambiar de rama se hace un preguardado que tienes que anular con este comando.
+* **git rm** _[Archivos]_: Para eliminar algún archivo del repositorio. ej: git rm *'*.txt'
+* **rm -rf .git**: para eliminar un git init
 * **git status** para saber donde estas y donde git te puede dar alguna pista sobre que puedes hacer.
-
+* **gitk --all --date-order**: muestra de forma gráfica los commits del repositorio.
 
 ## Operaciones específicas:
 
@@ -102,13 +105,14 @@ Para realizar un pull request entre dos ramas de un repositorio remoto y entre d
 ## Tips:
 
 * Se recomienda ante dudas lo primero es hacer **git status**.
+* Si tienes una duda o quieres saber más siempre es de buena ayuda **git (comando correspondiente) --help**.
 * Si quieres volver a quitar el proxy de github tienes que abrir con permiso (sudo) un editor de texto el config de github Ej: sudo **open ~/.gitconfig** y comenta (con #) las lineas donde esté configurado el proxy **#proxy = proxy.wifi.uma.es:3128** y **#[http]**.
 * Cuando hagas un **git branch** recordar hacer el **checkout** [nombre de la nueva rama] para empezar a trabajar en dicha rama.
 * Para empezar se recomienda hacer este turial de git:  https://try.github.io/
 * Para saber como escribir el **Readme.md** -> [Página muy útil](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 * Usando el **caracter** (**^**). Nos referimos al padre (parent) del commit. p.e: Poniendo _master^_ es equivalente a decir el primer pariente del master.
 
-##Software
+## Software
 
 ### Clientes De Git:
 
@@ -150,3 +154,5 @@ Para realizar un pull request entre dos ramas de un repositorio remoto y entre d
 * https://git-scm.com/book/es/v1/Fundamentos-de-Git-Trabajando-con-repositorios-remotos
 * https://aprendiendoausarlinux.wordpress.com/2011/11/18/el-comando-cat-en-unix/
 * https://gist.github.com/evantoli/f8c23a37eb3558ab8765
+* https://sethrobertson.github.io/GitFixUm/fixup.html#nonaffil
+* https://githowto.com/undoing_staged_changes
