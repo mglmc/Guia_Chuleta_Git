@@ -33,10 +33,11 @@
 * **git add** _[NombreFichero]_: Preparar ficheros para ser confirmados en el repositorio local.
 * **git commit -m** _"Comentario con los cambios realizados"_: Confirmar cambios en un repositorio local.
   * **-m**: Para añadir el mensaje.
-  * **-a**: Hace el _stage_ directamente (te saltas el _git add_) puedes usarlo junto con el otro comando (-ma).
-* **git reset commit**: Deshacer las operaciones de preparar y confirmar.
-  * **git reset --soft**
-  * **git reset --hard**
+  * **-a**: Hace el _stage_ directamente (te saltas el _git add_ y puedes usarlo junto con el otro comando (-ma)).
+* **git reset (SHA del commit)** [Imagen y explicación](https://stackoverflow.com/questions/3528245/whats-the-difference-between-git-reset-mixed-soft-and-hard)
+  * **git reset --soft**: Cuando se hace un _add_ y tenemos el cambio en _stage_ o _index_ si aplicamos el reset se anula el estado de _stage_ y esos cambios vuelven a necesitar un _add_.
+  * **git reset --mixed**: (por defecto)
+  * **git reset --hard**:
 * **git status**: Identificar el estado de un fichero o ficheros en un repositorio local.
 
 **En control de versiones remoto**
@@ -156,3 +157,4 @@ Para realizar un pull request entre dos ramas de un repositorio remoto y entre d
 * https://gist.github.com/evantoli/f8c23a37eb3558ab8765
 * https://sethrobertson.github.io/GitFixUm/fixup.html#nonaffil
 * https://githowto.com/undoing_staged_changes
+* https://stackoverflow.com/questions/3528245/whats-the-difference-between-git-reset-mixed-soft-and-hard
